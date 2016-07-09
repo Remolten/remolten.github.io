@@ -9,11 +9,15 @@
         <meta name="robots" content="index, follow">
 <!--        <link href="favicon.ico" rel="shortcut icon">-->
 		
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="//s.mlcdn.co/animate.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+        <link rel="stylesheet" href="https://s.mlcdn.co/animate.css">
         
         <style>
             body {
+                overflow: hidden;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-style: normal;
                 background: -moz-linear-gradient(270deg, rgba(224,145,255,1) 0%, rgba(75,46,133,1) 100%); /* ff3.6+ */
                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(224,145,255,1)), color-stop(100%, rgba(75,46,133,1))); /* safari4+,chrome */
                 background: -webkit-linear-gradient(270deg, rgba(224,145,255,1) 0%, rgba(75,46,133,1) 100%); /* safari5.1+,chrome10+ */
@@ -23,30 +27,33 @@
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E091FF', endColorstr='#4B2E85',GradientType=0 ); /* ie6-9 */
             }
             
-            #social {
-                padding-top: 0.7em;
+            .wrapper {
+                height: 100%;
+/*                min-height: 100%;*/
+/*                position: relative;*/
             }
             
-            #social > a {
-                padding-right: 0.8em;
-                color: #444;
+            a {
+                text-decoration: none;
+                color: #fff;
             }
             
-            #social > a:focus, #social > a:hover, #social > a:active {
-                color: #000;
+            a:hover {
+                color: #ddd;
             }
             
-            .centered {
-                padding-left: 2em;
-                height: 0em;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                margin: auto;
+            .vcentered {
+                padding: 0em 1em 0em 1em;
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
             }
             
             #name {
                 color: white;
+                font-size: 1.6em;
                 -webkit-animation-duration: 2.6s;
                 -moz-animation-duration: 2.6s;
                 -o-animation-duration: 2.6s;
@@ -54,27 +61,62 @@
                 animation-duration: 2.6s;
             }
             
-            #description {
+            .ndivider {
                 display: none;
-                color: white;
+                width: 100;
+                position: absolute;
+                margin-top: -1.0em;
+            }
+            
+            #descriptionP {
+                color: rgba(0, 0, 0, 0);
+                padding-bottom: 1em;
+                font-size: 1.3em;
+            }
+            
+            #social {
+                padding: 0em 0em 0em 0em;
+            }
+            
+            #social > a {
+                color: rgba(0, 0, 0, 0);
+                padding-right: 1.1em;
+            }
+            
+            .hoverColor:hover {
+                color: rgba(200, 200, 200, 1) !important;
             }
         </style>
         
 	</head>
     
     <body>
-        <div class="centered">
-            <div id="name" class="animated fadeIn">
-                <h1>Hello, I'm Remington Thurber.</h1>
-            </div>
-            
-            <p id="description" class="animated pulse">A college student with aspirations to become something great. Currently a student at the South Dakota School of Mines and Technology in Rapid City. Please email me any employment inquiries. Check me out on social media!</p>
-            
-            <div id="social">
-                <a href="https://www.github.com/Remolten"><i class="fa fa-github fa-2x"></i></a>
-                <a href="https://www.facebook.com/remingtonthurber"><i class="fa fa-facebook fa-2x"></i></a>
-                <a href="https://www.twitter.com/Remolten11"><i class="fa fa-twitter fa-2x"></i></a>
-                <a href="mailto:remingtonthurber@gmail.com"><i class="fa fa-envelope fa-2x"></i></a>
+        <div class="wrapper">
+            <div class="vcentered">
+                <!--<div>
+                    <img src="https://pbs.twimg.com/profile_images/734938179212615680/p3YEV7la_400x400.jpg" style="padding-top: 0em; height: 30%;">
+                </div>-->
+                <div id="name" class="animated fadeIn">
+                    <h1>Hello, I'm Remington Thurber.</h1>
+                </div>
+                <hr id="ndivider" class="ndivider animated fadeInLeft">
+                <div id="description">
+                    <p id="descriptionP">A college student with aspirations to become something great.  Currently a student at the South Dakota School of Mines and Technology in Rapid City.  Check me out on social media!<!--<br><br><br><br>
+                        <i class="fa fa-briefcase"></i> Check out my Resume<br>
+                        <a href="//google.com"><i class="fa fa-search"></i> View</a>
+                        <span style="padding: 0em 1em 0em 1em"></span>
+                        <a href="//google.com"><i class="fa fa-download"></i> Download</a>-->
+                    </p>
+                </div>
+<!--                <hr class="ndivider" style="display:block;">-->
+                <div id="social">
+                    <a id="github" href="https://www.github.com/Remolten" title="Github"><i class="fa fa-github fa-2x"></i></a>
+                    <a id="facebook" href="https://www.facebook.com/remingtonthurber" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a id="twitter" href="https://www.twitter.com/Remolten11" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a id="email" href="mailto:remingtonthurber@gmail.com" title="Email"><i class="fa fa-envelope fa-2x"></i></a>
+                    <a id="resume" href="//google.com" title="Resume"><i class="fa fa-file-pdf-o fa-2x"></i><!-- <i class="fa fa-arrow-left"></i> My Resume--></a>
+                    <!--<i class="fa fa-circle" style="color:white;"></i><a style="display:block" href="//google.com"><i class="fa fa-camera fa-2x"></i></a>-->
+                </div>
             </div>
         </div>
     </body>
@@ -84,12 +126,34 @@
     <script>
             $(document).ready(function() {
                //$('#name').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', displayOtherAnimations);
-
-                function displayOtherAnimations() {
-                    $('#description').fadeIn(200);
-                }
                 
-                setTimeout(displayOtherAnimations, 2000)
+                setTimeout(function() {
+                    $('#ndivider').show();
+                }, 800);
+                setTimeout(function() {
+                    $('#descriptionP').addClass('animated fadeIn');
+                    $('#descriptionP').css('color', 'rgba(255, 255, 255, 1)');
+                }, 2200);
+                setTimeout(function() {
+                    $('#github').addClass('animated fadeInLeft hoverColor');
+                    $('#github').css('color', 'rgba(255, 255, 255, 1)');
+                }, 2800);
+                setTimeout(function() {
+                    $('#facebook').addClass('animated fadeInLeft hoverColor');
+                    $('#facebook').css('color', 'rgba(255, 255, 255, 1)');
+                }, 3000);
+                setTimeout(function() {
+                    $('#twitter').addClass('animated fadeInLeft hoverColor');
+                    $('#twitter').css('color', 'rgba(255, 255, 255, 1)');
+                }, 3200);
+                setTimeout(function() {
+                    $('#email').addClass('animated fadeInLeft hoverColor');
+                    $('#email').css('color', 'rgba(255, 255, 255, 1)');
+                }, 3400);
+                setTimeout(function() {
+                    $('#resume').addClass('animated fadeInLeft hoverColor');
+                    $('#resume').css('color', 'rgba(255, 255, 255, 1)');
+                }, 3600);
             });
     </script>
 </html>
