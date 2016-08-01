@@ -104,15 +104,15 @@
     <body>
         <div class="wrapper">
             <div class="vcentered">
-                <!--<div>
-                    <img src="https://pbs.twimg.com/profile_images/734938179212615680/p3YEV7la_400x400.jpg" style="padding-top: 0em; height: 30%;">
-                </div>-->
+                <div id="photo" style="visibility: hidden;">
+                    <img src="https://pbs.twimg.com/profile_images/760175049533825025/qrSIEB5l.jpg" style="height: 30%; border-radius: 50%;">
+                </div>
                 <div id="name" class="animated fadeIn">
                     <h1>Hello, I'm Remington Thurber.</h1>
                 </div>
                 <hr id="ndivider" class="ndivider animated fadeInLeft">
                 <div id="description">
-                    <p id="descriptionP">A college student with aspirations to become something great.  Currently a student at the South Dakota School of Mines and Technology in Rapid City, SD.  Check me out on social media and Github!
+                    <p id="descriptionP">A college student and programmer with aspirations to become something great. Currently majoring in Computer Science at the South Dakota School of Mines and Technology in Rapid City, SD. Check me out on social media!
                     </p>
                 </div>
                 <div id="social">
@@ -152,6 +152,10 @@
                     $('#email').addClass('animated fadeInLeft hoverColor');
                     $('#email').css('color', 'rgba(220, 220, 220, 1)');
                 }, 3400);
+                setTimeout(function() {
+                    $('#photo').addClass('animated fadeInLeft');
+                    $('#photo').css('visibility', 'visible');
+                }, 3410);
             });
     </script>
 </html>
