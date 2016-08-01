@@ -7,11 +7,11 @@
         <meta name="description" content="This site contains the incredible portfolio of Remington Thurber!">
         <meta name="author" content="Remington Thurber">
         <meta name="robots" content="index, follow">
+        
 <!--        <link href="favicon.ico" rel="shortcut icon">-->
-		
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
-        <link rel="stylesheet" href="https://s.mlcdn.co/animate.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         
         <style>
             body {
@@ -70,7 +70,7 @@
             
             #descriptionP {
                 color: rgba(0, 0, 0, 0);
-                padding-bottom: 1em;
+                padding-bottom: 0em;
                 font-size: 1.3em;
             }
             
@@ -81,10 +81,24 @@
             #social > a {
                 color: rgba(0, 0, 0, 0);
                 padding-right: 1.1em;
+                /* For enlarging effect */
+                -webkit-transition:  -webkit-transform 1s ease-out;
+                -moz-transition: -moz-transform 1s ease-out;
+                -o-transition: -o-transform 1s ease-out;
+                -ms-transition: -ms-transform 1s ease-out; 
+                transition: transform 1s ease-out;
             }
             
             .hoverColor:hover {
-                color: rgba(200, 200, 200, 1) !important;
+                color: rgba(240, 240, 240, 1) !important;
+            }
+            
+            .hoverColor:hover > i {
+                /* For enlarging effect */
+                -webkit-transform:scale(1.1);
+                -moz-transform:scale(1.1);
+                -o-transform:scale(1.1);
+                transform:scale(1.1);
             }
         </style>
         
@@ -101,7 +115,7 @@
                 </div>
                 <hr id="ndivider" class="ndivider animated fadeInLeft">
                 <div id="description">
-                    <p id="descriptionP">A college student with aspirations to become something great.  Currently a student at the South Dakota School of Mines and Technology in Rapid City.  Check me out on social media!<!--<br><br><br><br>
+                    <p id="descriptionP">A college student with aspirations to become something great.  Currently a student at the South Dakota School of Mines and Technology in Rapid City, SD.  Check me out on social media and Github!<!--<br><br><br><br>
                         <i class="fa fa-briefcase"></i> Check out my Resume<br>
                         <a href="//google.com"><i class="fa fa-search"></i> View</a>
                         <span style="padding: 0em 1em 0em 1em"></span>
@@ -114,7 +128,7 @@
                     <a id="facebook" href="https://www.facebook.com/remingtonthurber" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a>
                     <a id="twitter" href="https://www.twitter.com/Remolten11" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
                     <a id="email" href="mailto:remingtonthurber@gmail.com" title="Email"><i class="fa fa-envelope fa-2x"></i></a>
-                    <a id="resume" href="//google.com" title="Resume"><i class="fa fa-file-pdf-o fa-2x"></i><!-- <i class="fa fa-arrow-left"></i> My Resume--></a>
+                    <!--<a id="resume" href="//google.com" title="Resume"><i class="fa fa-file-pdf-o fa-2x"></i>--><!-- <i class="fa fa-arrow-left"></i> My Resume--></a>
                     <!--<i class="fa fa-circle" style="color:white;"></i><a style="display:block" href="//google.com"><i class="fa fa-camera fa-2x"></i></a>-->
                 </div>
             </div>
@@ -136,24 +150,25 @@
                 }, 2200);
                 setTimeout(function() {
                     $('#github').addClass('animated fadeInLeft hoverColor');
-                    $('#github').css('color', 'rgba(255, 255, 255, 1)');
+                    $('#github').css('color', 'rgba(220, 220, 220, 1)');
                 }, 2800);
                 setTimeout(function() {
                     $('#facebook').addClass('animated fadeInLeft hoverColor');
-                    $('#facebook').css('color', 'rgba(255, 255, 255, 1)');
+                    $('#facebook').css('color', 'rgba(220, 220, 220, 1)');
                 }, 3000);
                 setTimeout(function() {
                     $('#twitter').addClass('animated fadeInLeft hoverColor');
-                    $('#twitter').css('color', 'rgba(255, 255, 255, 1)');
+                    $('#twitter').css('color', 'rgba(220, 220, 220, 1)');
                 }, 3200);
                 setTimeout(function() {
                     $('#email').addClass('animated fadeInLeft hoverColor');
-                    $('#email').css('color', 'rgba(255, 255, 255, 1)');
+                    $('#email').css('color', 'rgba(220, 220, 220, 1)');
                 }, 3400);
-                setTimeout(function() {
-                    $('#resume').addClass('animated fadeInLeft hoverColor');
-                    $('#resume').css('color', 'rgba(255, 255, 255, 1)');
-                }, 3600);
+                //$('#github').hover()
+//                setTimeout(function() {
+//                    $('#resume').addClass('animated fadeInLeft hoverColor');
+//                    $('#resume').css('color', 'rgba(220, 220, 220, 1)');
+//                }, 3600);
             });
     </script>
 </html>
