@@ -32,10 +32,6 @@
                 height: 100%;
             }
             
-            a {
-                text-decoration: none;
-            }
-            
             .vcentered {
                 padding: 0em 1em 0em 1em;
                 position: relative;
@@ -43,6 +39,15 @@
                 -webkit-transform: translateY(-50%);
                 -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
+            }
+            
+            #photo {
+                visibility: hidden;
+            }
+            
+            #photo > img {
+                height: 30%;
+                border-radius: 50%;
             }
             
             #name {
@@ -74,6 +79,8 @@
             }
             
             #social > a {
+                display: inline;
+                text-decoration: none;
                 color: rgba(0, 0, 0, 0);
                 padding-right: 1.1em;
                 font-size: 1.11em;
@@ -93,22 +100,28 @@
                 -ms-transform: scale(1.1);
                 transform: scale(1.1);
             }
+            
+            @media only screen and (max-width: 600px) {
+                #social > a:nth-of-type(3):after {
+                    content: "\a\a";
+                    white-space: pre;
+                }
+            }
         </style>
-        
 	</head>
     
     <body>
         <div class="wrapper">
             <div class="vcentered">
-                <div id="photo" style="visibility: hidden;">
-                    <img src="https://pbs.twimg.com/profile_images/760175049533825025/qrSIEB5l.jpg" style="height: 30%; border-radius: 50%;">
+                <div id="photo">
+                    <img src="https://pbs.twimg.com/profile_images/760175049533825025/qrSIEB5l.jpg">
                 </div>
                 <div id="name" class="animated fadeIn">
                     <h1>Hello, I'm Remington Thurber.</h1>
                 </div>
                 <hr id="ndivider" class="ndivider animated fadeInLeft">
                 <div id="description">
-                    <p id="descriptionP">A college student and programmer with aspirations to become something great. Currently majoring in Computer Science at the South Dakota School of Mines and Technology in Rapid City, SD. Check me out on social media!
+                    <p id="descriptionP">A college student and programmer with aspirations to become something great. Currently majoring in <b>Computer Science</b> at the South Dakota School of Mines and Technology in Rapid City, SD. Check me out on social media!
                     </p>
                 </div>
                 <div id="social">
